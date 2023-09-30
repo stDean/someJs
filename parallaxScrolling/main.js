@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
   // get no of pixel by which you have scrolled up
   let scroll = window.pageYOffset;
 
-  // 
+  // get the size and position of thr section
   let sectionY = section.getBoundingClientRect();
 
   // Move the images and the big text as you scroll
@@ -31,16 +31,18 @@ window.addEventListener("scroll", () => {
     element.style.opacity = scroll / (sectionY.top + section_height);
   });
 
-  // reduce the Big text opacity as you scroll down
+  // reduce the Big text opacity as you scroll down (form 1 to 0)
   big_title.style.opacity = -scroll / (header_height / 2) + 1;
 
    // increase the shadow height on scroll
   shadow.style.height = `${scroll * 0.5 + 300}px`;
 
+  // transform between 0 and 50
   content.style.transform = `translateY(${
     (scroll / (section_height + sectionY.top)) * 50 - 50
   }px)`;
 
+  // transform between 0 and 50
   image_container.style.transform = `translateY(${
     (scroll / (section_height + sectionY.top)) * -50 + 50
   }px)`;

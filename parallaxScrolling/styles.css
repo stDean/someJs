@@ -216,9 +216,9 @@ section .container>* {
   background: linear-gradient(to top, #151515, transparent);
 }
 
-/* .opacity {
+.opacity {
   opacity: 0;
-} */
+}
 
 /* END */
 
