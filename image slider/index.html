@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Slider App</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/1780644c71.js"
       crossorigin="anonymous"
@@ -13,12 +13,22 @@
   </head>
   <body>
     <main class="container">
+       <div class="background">
+        <img src="img/bg1.jpg" class="bg" />
+        <img src="img/bg2.jpg" class="bg" />
+        <img src="img/bg3.jpg" class="bg" />
+        <img src="img/bg4.jpg" class="bg" />
+        <img src="img/bg5.jpg" class="bg" />
+        <img src="img/bg6.jpeg" class="bg" />
+        <img src="img/bg7.jpeg" class="bg" />
+      </div>
+
       <div class="slider-container">
         <div>
           <div>
             <div class="slider">
-              <div class="img" id="first">
-                <img src="img/bg5.jpg" />
+              <div class="img" id="last">
+                <img src="img/bg7.jpg" />
               </div>
               <div class="img">
                 <img src="img/bg1.jpg" />
@@ -35,11 +45,14 @@
               <div class="img">
                 <img src="img/bg5.jpg" />
               </div>
-              <div class="img" id="last">
+              <div class="img">
                 <img src="img/bg6.jpeg" />
               </div>
-              <div class="img" id="last">
+              <div class="img">
                 <img src="img/bg7.jpeg" />
+              </div>
+              <div class="img" id="first">
+                <img src="img/bg1.jpeg" />
               </div>
             </div>
           </div>
@@ -60,8 +73,12 @@
           <li class="option" op-index="2"></li>
           <li class="option" op-index="3"></li>
           <li class="option" op-index="4"></li>
+          <li class="option" op-index="5"></li>
+          <li class="option" op-index="6"></li>
         </ul>
       </div>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
