@@ -2,7 +2,7 @@ const sizes = document.querySelectorAll(".size");
 const colors = document.querySelectorAll(".color");
 const shoes = document.querySelectorAll(".shoe");
 const gradients = document.querySelectorAll(".gradient");
-// const shoeBg = document.querySelector('.shoeBackground');
+const shoeBg = document.querySelector(".shoeBackground");
 
 let prevColor = "blue";
 let animationEnd = true;
@@ -64,3 +64,23 @@ colors.forEach((color) => {
     });
   });
 });
+
+/**
+ * set a window media query to max-width: 1000px
+ * when the media condition is met resizing the shoe container's height based on the shoe's height
+ * else leave the height as originally set
+ */
+let x = window.matchMedia("(max-width: 1000px)");
+
+const changeHeight = () => {
+  if (x.matches) {
+    let shoeHeight = shoes[0].offsetHeight;
+    shoeBg.style.height = `${shoeHeight * 0.9}px`;
+  } else {
+    shoeBg.style.height = "475px";
+  }
+};
+
+changeHeight();
+
+window.addEventListener("resize", changeHeight);
