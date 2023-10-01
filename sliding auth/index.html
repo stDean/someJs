@@ -14,7 +14,7 @@
   <body>
     <main class="container">
       <div class="blueBg">
-        <div class="box signin">
+        <div class="box signIn">
           <h1>Already have an account?</h1>
           <button class="signInBtn">Sign In</button>
         </div>
@@ -25,9 +25,30 @@
         </div>
       </div>
 
-      <div class="formEx">
-        
+      <div class="formBox">
+        <div class="form signInForm">
+          <form action="">
+            <h3>Sign In</h3>
+            <input type="text" placeholder="username" />
+            <input type="password" placeholder="password" />
+            <input type="submit" value="Login" />
+            <a href="#">Forget Password?</a>
+          </form>
+        </div>
+
+        <div class="form signUpForm">
+          <form action="">
+            <h3>Sign Up</h3>
+            <input type="text" placeholder="username" />
+            <input type="email" placeholder="email" />
+            <input type="password" placeholder="password" />
+            <input type="password" placeholder="confirm password" />
+            <input type="submit" value="Register" />
+          </form>
+        </div>
       </div>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
