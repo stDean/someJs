@@ -59,6 +59,25 @@ body {
   z-index: -2;
 }
 
+.first {
+  z-index: 0;
+  animation: 1s width ease;
+}
+
+@keyframes width {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.second {
+  z-index: -1;
+}
+
 .gradient[color="blue"] {
   background-image: linear-gradient(45deg, #0136af, #22abfa);
 }
