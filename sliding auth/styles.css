@@ -86,6 +86,20 @@ body.active {
   left: 50%;
 }
 
+.formBox .form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transition: .5s;
+}
+
+.formBox .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .formBox .signInForm {
   transition-delay: .25s;
 }
@@ -103,20 +117,6 @@ body.active {
 .formBox.active .signUpForm {
   left: 0 !important;
   transition-delay: .25s;
-}
-
-.formBox .form {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 50px;
-  transition: .5s;
-}
-
-.formBox .form form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .formBox .form form h3 {
